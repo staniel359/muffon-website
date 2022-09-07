@@ -31,7 +31,7 @@ module.exports = {
       }
     }
   },
-  outputDir: 'build',
+  outputDir: 'dist',
   pluginOptions: {
     i18n: {
       enableLegacy: true
