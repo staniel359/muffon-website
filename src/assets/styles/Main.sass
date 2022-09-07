@@ -1,0 +1,35 @@
+@font-face
+  font-family: LatoDefault
+  src: url('*/assets/fonts/LatoDefault.ttf') format('truetype')
+
+*:not(i)
+  font-family: Lato, LatoDefault, Helvetica Neue, Arial, Helvetica, sans-serif !important
+
+.ui.header
+  &.main-header
+    margin: 0
+    &:not(:first-child)
+      margin-top: 1em
+
+.ui.segments
+  &.main-segments
+    border: none
+    margin: 0
+    .ui.segment
+      &.main-segment
+        &:not(:first-child)
+          border-top: 1px solid grey !important
+
+.ui.segment
+  &.main-segment
+    border-radius: 0 !important
+    padding: 0
+
+.icon
+  &.dont
+    position: sticky !important
+    z-index: 1
+
+.ui.container
+  &.main-container
+    padding: 3em

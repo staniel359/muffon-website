@@ -1,0 +1,13 @@
+{
+  "title": "Get new music experience",
+  "download": "Download for {systemName}",
+  "fileSize": "({size} Mb)",
+  "notSupported": "Sorry, muffon in not supported by your system.",
+  "services": "All services in one place",
+  "features": {
+    "crossPlatform": "Cross-platform",
+    "noAds": "No ads",
+    "noPayments": "No payments",
+    "noSpam": "No spam"
+  }
+}

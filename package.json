@@ -1,20 +1,23 @@
 {
   "name": "muffon-website",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "fomantic-ui": "^2.8.8",
     "vue": "^3.2.13",
+    "vue-i18n": "^9.1.0",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@intlify/vue-i18n-loader": "^3.0.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
@@ -26,6 +29,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.32.7",
-    "sass-loader": "^12.0.0"
+    "sass-loader": "^12.0.0",
+    "vue-cli-plugin-i18n": "~2.3.1"
   }
 }
