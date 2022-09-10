@@ -1,8 +1,8 @@
 import {
   createI18n
 } from 'vue-i18n'
-import en from '*/helpers/data/plugins/i18n/locales/en.json'
-import ru from '*/helpers/data/plugins/i18n/locales/ru.json'
+import en from '*/locales/en.json'
+import ru from '*/locales/ru.json'
 
 const messages = {
   en,

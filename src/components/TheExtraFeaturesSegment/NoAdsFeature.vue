@@ -1,19 +1,16 @@
 <template>
-  <div class="no-feature">
+  <div class="feature-item">
     <h2 class="ui inverted header main-header">
       <i class="icons">
-        <i
-          class="large red dont icon"
-        />
+        <i class="large red dont icon" />
 
-        <i
-          class="small money check alternate icon"
-        />
+        <i class="small money check alternate icon" />
       </i>
 
-      <div class="content">
-        {{ noAdsText }}
-      </div>
+      <div
+        class="content"
+        v-text="noAdsText"
+      />
     </h2>
   </div>
 </template>
@@ -24,7 +21,7 @@ export default {
   computed: {
     noAdsText () {
       return this.$t(
-        'features.noAds'
+        'features.extra.noAds'
       )
     }
   }

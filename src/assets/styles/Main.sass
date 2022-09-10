@@ -5,6 +5,9 @@
 *:not(i)
   font-family: Lato, LatoDefault, Helvetica Neue, Arial, Helvetica, sans-serif !important
 
+html
+  scroll-behavior: smooth
+
 .ui.header
   &.main-header
     margin: 0
@@ -18,7 +21,7 @@
     .ui.segment
       &.main-segment
         &:not(:first-child)
-          border-top: 1px solid grey !important
+          border-top: 1px solid $colorGreyInverted !important
 
 .ui.segment
   &.main-segment
@@ -33,3 +36,14 @@
 .ui.container
   &.main-container
     padding: 3em
+
+.ui.modal
+  .scrolling.content
+    max-height: calc(100vh - 10rem)
+
+.main-link
+  color: unset !important
+  cursor: pointer
+  &:hover,
+  .ui.header:hover
+    color: $colorBase !important

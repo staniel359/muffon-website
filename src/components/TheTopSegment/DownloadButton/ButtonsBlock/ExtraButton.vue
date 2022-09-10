@@ -3,21 +3,16 @@
     ref="button"
     class="ui floating dropdown icon button extra-button"
   >
-    <i
-      class="dropdown icon"
-    />
+    <i class="dropdown icon" />
 
     <div class="menu">
-      <template
+      <SystemItem
         v-for="systemData in systems"
         :key="systemData.code"
-      >
-        <SystemItem
-          :system-data="systemData"
-          :system-code="systemCode"
-          :file-data="filesData[systemData.code]"
-        />
-      </template>
+        :system-data="systemData"
+        :system-code="systemCode"
+        :file-data="filesData[systemData.code]"
+      />
     </div>
   </div>
 </template>
@@ -64,6 +59,6 @@ export default {
 
 <style lang="sass" scoped>
 .extra-button
-  display: flex
+  display: flex !important
   align-items: center
 </style>

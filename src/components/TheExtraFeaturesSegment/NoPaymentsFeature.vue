@@ -1,19 +1,16 @@
 <template>
-  <div class="no-feature">
+  <div class="feature-item">
     <h2 class="ui inverted header main-header">
       <i class="icons">
-        <i
-          class="large red dont icon"
-        />
+        <i class="large red dont icon" />
 
-        <i
-          class="small dollar sign icon"
-        />
+        <i class="small dollar sign icon" />
       </i>
 
-      <div class="content">
-        {{ noPaymentsText }}
-      </div>
+      <div
+        class="content"
+        v-text="noPaymentsText"
+      />
     </h2>
   </div>
 </template>
@@ -24,7 +21,7 @@ export default {
   computed: {
     noPaymentsText () {
       return this.$t(
-        'features.noPayments'
+        'features.extra.noPayments'
       )
     }
   }

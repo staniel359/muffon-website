@@ -1,30 +1,29 @@
 <template>
   <div class="ui segment main-segment">
     <div class="ui container main-container services-container">
-      <h1 class="ui inverted header main-header">
-        {{ servicesText }}
-      </h1>
+      <HeaderSection />
 
-      <div class="ui massive labels services-labels">
-        <div
+      <div class="ui massive labels">
+        <ServiceLabel
           v-for="serviceData in services"
           :key="serviceData.code"
-          class="ui circular icon label service-label"
-          :data-content="serviceData.name"
-        >
-          <i
-            class="icon"
-            :class="serviceData.code"
-          />
-        </div>
+          :service-data="serviceData"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import HeaderSection from './TheServicesSegment/HeaderSection.vue'
+import ServiceLabel from './TheServicesSegment/ServiceLabel.vue'
+
 export default {
   name: 'TheServicesSegment',
+  components: {
+    HeaderSection,
+    ServiceLabel
+  },
   data () {
     return {
       services: [
@@ -74,35 +73,13 @@ export default {
         }
       ]
     }
-  },
-  computed: {
-    servicesText () {
-      return this.$t(
-        'services'
-      )
-    }
-  },
-  mounted () {
-    $(
-      '.service-label'
-    ).popup(
-      {
-        position: 'top center'
-      }
-    )
   }
 }
 </script>
 
 <style lang="sass" scoped>
 .services-container
-  display: flex
+  display: flex !important
   flex-direction: column
   align-items: center
-
-.services-labels
-  margin-top: 2em
-
-.service-label
-  background: white
 </style>

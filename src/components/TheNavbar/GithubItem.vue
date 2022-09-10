@@ -4,9 +4,7 @@
     :href="githubLink"
     target="_blank"
   >
-    <i
-      class="github large icon"
-    />
+    <i class="github large icon" />
   </a>
 </template>
 

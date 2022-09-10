@@ -1,0 +1,129 @@
+{
+  "title": "Get new music experience",
+  "download": "Download for {systemName}",
+  "fileSize": "({size} Mb)",
+  "notSupported": "Sorry, muffon in not supported by your system.",
+  "services": "All services in one place",
+  "downloadNow": "Download now",
+  "donate": "Donate",
+  "features": {
+    "header": "All the needed features",
+    "categories": {
+      "basic": "Basic",
+      "personal": "Personal",
+      "social": "Social"
+    },
+    "basic": {
+      "listen": {
+        "header": "Listening",
+        "subheader": "With 7 audio sources, fallback source option, song variants and queue"
+      },
+      "scrobble": {
+        "header": "Scrobbling",
+        "subheader": "Keep recording your Last.FM listening history"
+      },
+      "search": {
+        "header": "Search",
+        "subheader": "All of music search engines just in one window"
+      },
+      "radio": {
+        "header": "Radio",
+        "subheader": "Tune in to artist, tag or charts stations"
+      },
+      "videos": {
+        "header": "Videos",
+        "subheader": "With video variants, channels and related videos"
+      },
+      "lyrics": {
+        "header": "Lyrics",
+        "subheader": "With song variants"
+      },
+      "tags": {
+        "header": "Tags",
+        "subheader": "Explore your favorite genres or discover new ones"
+      },
+      "charts": {
+        "header": "Charts",
+        "subheader": "Find out, what's trending now"
+      },
+      "releases": {
+        "header": "Releases",
+        "subheader": "Track new or upcoming albums of your favorite artists"
+      },
+      "multitag": {
+        "header": "Multitag search",
+        "subheader": "Combine multiple tags to find what exactly matches your taste"
+      }
+    },
+    "personal": {
+      "library": {
+        "header": "Music library",
+        "subheader": "Import it from Last.FM, your computer or from search and get your compatibility with others"
+      },
+      "recommendations": {
+        "header": "Recommendations",
+        "subheader": "With filtering by library artists and tags"
+      },
+      "playlists": {
+        "header": "Playlists",
+        "subheader": "Create your unique mixes"
+      },
+      "favorites": {
+        "header": "Favorites",
+        "subheader": "For quick access to your liked ones"
+      },
+      "bookmarks": {
+        "header": "Bookmarks",
+        "subheader": "Save something for later"
+      },
+      "listened": {
+        "header": "Listened",
+        "subheader": "To always know that you've already listened to something"
+      },
+      "savedTracks": {
+        "header": "Saved tracks",
+        "subheader": "For offline listening"
+      },
+      "customize": {
+        "header": "Customization",
+        "subheader": "Enable dark mode, select background or change transparency"
+      }
+    },
+    "social": {
+      "share": {
+        "header": "Sharing",
+        "subheader": "Send links to music, videos, playlists or communities"
+      },
+      "post": {
+        "header": "Posting",
+        "subheader": "Tell the world about something or share something cool you've found"
+      },
+      "follow": {
+        "header": "Following",
+        "subheader": "Subscribe to someone interesting"
+      },
+      "message": {
+        "header": "Messaging",
+        "subheader": "Chat with people of your music taste"
+      },
+      "feed": {
+        "header": "Feed",
+        "subheader": "Get news from your subscriptions or global updates"
+      },
+      "communities": {
+        "header": "Communities",
+        "subheader": "Create and join various fan groups"
+      }
+    },
+    "extra": {
+      "noAds": "No ads",
+      "noPayments": "No payments",
+      "noSpam": "No spam"
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms And Conditions",
+    "contact": "Contact"
+  }
+}

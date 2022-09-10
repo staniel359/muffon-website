@@ -1,49 +1,67 @@
 <template>
   <div class="ui segment main-segment">
-    <div class="ui container main-container features-container">
-      <CrossPlatformFeature />
+    <div class="ui container main-container the-features-container">
+      <HeaderSection />
 
-      <div class="no-features-section">
-        <NoAdsFeature />
+      <CategoryButtonsSection
+        :categories="categories"
+        :selected="selected"
+        @button-click="handleCategoryButtonClick"
+      />
 
-        <NoPaymentsFeature />
-
-        <NoSpamFeature />
-      </div>
+      <FeaturesSection
+        :categories="categories"
+        :selected="selected"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import CrossPlatformFeature
-  from './TheFeaturesSegment/CrossPlatformFeature.vue'
-import NoAdsFeature from './TheFeaturesSegment/NoAdsFeature.vue'
-import NoPaymentsFeature from './TheFeaturesSegment/NoPaymentsFeature.vue'
-import NoSpamFeature from './TheFeaturesSegment/NoSpamFeature.vue'
+import HeaderSection from './TheFeaturesSegment/HeaderSection.vue'
+import CategoryButtonsSection
+  from './TheFeaturesSegment/CategoryButtonsSection.vue'
+import FeaturesSection from './TheFeaturesSegment/FeaturesSection.vue'
 
 export default {
   name: 'TheFeaturesSegment',
   components: {
-    CrossPlatformFeature,
-    NoAdsFeature,
-    NoPaymentsFeature,
-    NoSpamFeature
+    HeaderSection,
+    CategoryButtonsSection,
+    FeaturesSection
+  },
+  data () {
+    return {
+      selected: 'basic',
+      categories: [
+        {
+          code: 'basic',
+          component: 'BasicSection'
+        },
+        {
+          code: 'personal',
+          component: 'PersonalSection'
+        },
+        {
+          code: 'social',
+          component: 'SocialSection'
+        }
+      ]
+    }
+  },
+  methods: {
+    handleCategoryButtonClick (
+      value
+    ) {
+      this.selected = value
+    }
   }
 }
 </script>
 
 <style lang="sass" scoped>
-.features-container
-  display: flex
+.the-features-container
+  display: flex !important
   flex-direction: column
   align-items: center
-
-.no-features-section
-  margin-top: 2em
-  display: flex
-  align-items: center
-
-.no-feature
-  &:not(:first-child)
-    margin-left: 2em
 </style>

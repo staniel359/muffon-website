@@ -3,21 +3,34 @@
     <div class="logo-container">
       <img
         class="ui image"
-        src="@/assets/images/logo.png"
+        :src="logo"
       >
     </div>
 
     <div class="name-container">
-      <h1 class="ui inverted header">
-        muffon
-      </h1>
+      <h1
+        class="ui inverted header"
+        v-text="appName"
+      />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LogoNameItem'
+  name: 'LogoNameItem',
+  data () {
+    return {
+      appName: 'muffon'
+    }
+  },
+  computed: {
+    logo () {
+      return require(
+        '*/assets/images/logo.png'
+      )
+    }
+  }
 }
 </script>
 
