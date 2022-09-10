@@ -1,0 +1,129 @@
+{
+  "title": "Prova una nuova esperienza di ascolto",
+  "download": "Scarica per {systemName}",
+  "fileSize": "({size} Mb)",
+  "notSupported": "Ci dispiace, ma Muffon non è supportato dal tuo computer.",
+  "services": "Tutti i tuoi servizi in un unico posto",
+  "downloadNow": "Sarica adesso",
+  "donate": "Dona",
+  "features": {
+    "header": "Tutte le funzionalità di cui hai bisogno",
+    "categories": {
+      "basic": "Base",
+      "personal": "Personali",
+      "social": "Social"
+    },
+    "basic": {
+      "listen": {
+        "header": "Ascolto",
+        "subheader": "Con 7 sorgenti audio, opzione di sorgente secondaria, varianti di brani e coda"
+      },
+      "scrobble": {
+        "header": "Scrobbling",
+        "subheader": "Continua a registrare la tua cronologia di ascolto su Last.FM"
+      },
+      "search": {
+        "header": "Ricerca",
+        "subheader": "Tutti i motori di ricerca musicale in un unica finestra"
+      },
+      "radio": {
+        "header": "Radio",
+        "subheader": "Ascolta stazioni di artisti, tag o classifiche"
+      },
+      "videos": {
+        "header": "Video",
+        "subheader": "Con varianti dei video, canali e video correlati"
+      },
+      "lyrics": {
+        "header": "Testi",
+        "subheader": "Con le varianti delle canzoni"
+      },
+      "tags": {
+        "header": "Tag",
+        "subheader": "Esplora i tuoi generi preferiti e scoprine di nuovi"
+      },
+      "charts": {
+        "header": "Statistiche",
+        "subheader": "Scopri cosa va di moda adesso"
+      },
+      "releases": {
+        "header": "Uscite",
+        "subheader": "Tieni d'occhio gli album nuovi o in uscita dei tuoi artisti preferiti"
+      },
+      "multitag": {
+        "header": "Ricerca multitg",
+        "subheader": "Combina più tag e trova quello che corrisponde ai tuoi gusti"
+      }
+    },
+    "personal": {
+      "library": {
+        "header": "Libreria",
+        "subheader": "Importala da Last.FM, dal tuo computer o dalla ricerca e trova compatibilità con altre persone"
+      },
+      "recommendations": {
+        "header": "Suggeriti",
+        "subheader": "Con filtro per artisti e tag della libreria"
+      },
+      "playlists": {
+        "header": "Playlist",
+        "subheader": "Crea i tuoi mix personali"
+      },
+      "favorites": {
+        "header": "Preferiti",
+        "subheader": "Per un accesso veloce alle canzoni che ami di più"
+      },
+      "bookmarks": {
+        "header": "Segnalibri",
+        "subheader": "Salva qualcosa per dopo"
+      },
+      "listened": {
+        "header": "Ascoltati",
+        "subheader": "Per sapere sempre cosa hai già ascoltato"
+      },
+      "savedTracks": {
+        "header": "Brani salvati",
+        "subheader": "Ascoltali anche offline"
+      },
+      "customize": {
+        "header": "Personalizzazione",
+        "subheader": "Abilita la modalità scura, cambia lo sfondo o la trasparenza"
+      }
+    },
+    "social": {
+      "share": {
+        "header": "Condividi",
+        "subheader": "Inviare link di brani, video, playlist e community"
+      },
+      "post": {
+        "header": "Post",
+        "subheader": "Racconta qualcosa al mondo o condividi qualcosa di bello che hai scoperto"
+      },
+      "follow": {
+        "header": "Segui",
+        "subheader": "Iscriviti alle persone che ritieni interessanti"
+      },
+      "message": {
+        "header": "Messaggi",
+        "subheader": "Chatta con persone che hanno i tuoi stessi gusti musicali"
+      },
+      "feed": {
+        "header": "Feed",
+        "subheader": "Ricevi notizie dalle persone che segui e ricevi gli aggiornamenti globali"
+      },
+      "communities": {
+        "header": "Community",
+        "subheader": "Crea ed entra in diversi gruppi di fan"
+      }
+    },
+    "extra": {
+      "noAds": "Nessun annuncio",
+      "noPayments": "Nessun abbonamento",
+      "noSpam": "Niente spam"
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Termini e condizioni",
+    "contact": "Contatti"
+  }
+}
