@@ -17,28 +17,14 @@
 
 <script>
 import i18n from '*/plugins/i18n'
+import languages from '*/data/languages'
 
 export default {
   name: 'LanguageItem',
-  data () {
-    return {
-      languages: [
-        {
-          code: 'en',
-          name: 'English'
-        },
-        {
-          code: 'it',
-          name: 'Italiano'
-        },
-        {
-          code: 'ru',
-          name: 'Русский'
-        }
-      ]
-    }
-  },
   computed: {
+    languages () {
+      return languages
+    },
     dropdownOptions () {
       return {
         on: 'hover',

@@ -3,8 +3,8 @@
   "download": "Scarica per {systemName}",
   "fileSize": "({size} Mb)",
   "notSupported": "Ci dispiace, ma Muffon non è supportato dal tuo computer.",
-  "services": "Tutti i tuoi servizi in un unico posto",
-  "downloadNow": "Sarica adesso",
+  "services": "Tutti i servizi in un unico posto",
+  "downloadNow": "Scarica adesso",
   "donate": "Dona",
   "features": {
     "header": "Tutte le funzionalità di cui hai bisogno",
@@ -51,7 +51,7 @@
         "subheader": "Tieni d'occhio gli album nuovi o in uscita dei tuoi artisti preferiti"
       },
       "multitag": {
-        "header": "Ricerca multitg",
+        "header": "Ricerca multitag",
         "subheader": "Combina più tag e trova quello che corrisponde ai tuoi gusti"
       }
     },
