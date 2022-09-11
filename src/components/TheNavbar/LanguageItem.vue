@@ -28,6 +28,10 @@ export default {
           name: 'English'
         },
         {
+          code: 'it',
+          name: 'Italiano'
+        },
+        {
           code: 'ru',
           name: 'Русский'
         }
