@@ -8,9 +8,9 @@
         v-for="languageData in languages"
         :key="languageData.code"
         :value="languageData.code"
-      >
-        {{ languageData.name }}
-      </option>
+        :selected="!!languageData.isMain"
+        v-text="languageData.name"
+      />
     </select>
   </div>
 </template>

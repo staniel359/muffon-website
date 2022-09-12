@@ -1,7 +1,12 @@
 export default [
   {
+    code: 'by',
+    name: 'Беларуская'
+  },
+  {
     code: 'en',
-    name: 'English'
+    name: 'English',
+    isMain: true
   },
   {
     code: 'it',
