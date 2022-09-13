@@ -1,15 +1,13 @@
 <template>
   <div class="item">
     <select
-      ref="language"
+      ref="dropdown"
       class="ui inverted dropdown language-select"
     >
-      <option
-        v-for="languageData in languages"
-        :key="languageData.code"
-        :value="languageData.code"
-        :selected="!!languageData.isMain"
-        v-text="languageData.name"
+      <LocaleOption
+        v-for="localeData in locales"
+        :key="localeData.code"
+        :locale-data="localeData"
       />
     </select>
   </div>
@@ -17,13 +15,17 @@
 
 <script>
 import i18n from '*/plugins/i18n'
-import languages from '*/data/languages'
+import LocaleOption from './LanguageSelectItem/LocaleOption.vue'
+import locales from '*/data/locales'
 
 export default {
-  name: 'LanguageItem',
+  name: 'LanguageSelectItem',
+  components: {
+    LocaleOption
+  },
   computed: {
-    languages () {
-      return languages
+    locales () {
+      return locales
     },
     dropdownOptions () {
       return {
@@ -33,19 +35,19 @@ export default {
           hide: 150
         },
         onChange:
-          this.handleLanguageChange
+          this.handleLocaleChange
       }
     }
   },
   mounted () {
     $(
-      this.$refs.language
+      this.$refs.dropdown
     ).dropdown(
       this.dropdownOptions
     )
   },
   methods: {
-    handleLanguageChange (
+    handleLocaleChange (
       value
     ) {
       i18n.global.locale = value

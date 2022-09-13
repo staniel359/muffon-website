@@ -1,6 +1,6 @@
 export default [
   {
-    code: 'by',
+    code: 'be',
     name: 'Беларуская'
   },
   {

@@ -1,32 +1,32 @@
 import {
   createI18n
 } from 'vue-i18n'
-import languages from '*/data/languages'
+import locales from '*/data/locales'
 
-function formatLanguage (
+function formatLocale (
   {
     code
   }
 ) {
-  const translations =
+  const locale =
     require(
       `*/data/locales/${code}.json`
     )
 
   return [
     code,
-    translations
+    locale
   ]
 }
 
-const languagesFormatted =
-  languages.map(
-    formatLanguage
+const localesFormatted =
+  locales.map(
+    formatLocale
   )
 
 const messages =
   Object.fromEntries(
-    languagesFormatted
+    localesFormatted
   )
 
 export default createI18n(
