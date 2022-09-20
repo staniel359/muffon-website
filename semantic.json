@@ -18,5 +18,23 @@
   "permission": false,
   "autoInstall": false,
   "rtl": false,
+  "components": [
+    "button",
+    "container",
+    "header",
+    "icon",
+    "image",
+    "label",
+    "segment",
+    "grid",
+    "dropdown",
+    "modal",
+    "popup",
+    "menu",
+    "transition",
+    "dimmer",
+    "site",
+    "reset"
+  ],
   "version": "2.8.8"
 }
