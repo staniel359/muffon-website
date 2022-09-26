@@ -38,6 +38,11 @@ export default {
           icon: 'facebook',
           link: 'https://www.facebook.com/profile.php?id=100076400978640',
           text: 'Facebook'
+        },
+        {
+          icon: 'discord',
+          link: 'https://discord.gg/kpWsA5NBmJ',
+          text: 'Discord'
         }
       ]
     }
