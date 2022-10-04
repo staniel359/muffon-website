@@ -2,11 +2,10 @@
   <div
     ref="label"
     class="ui circular icon label service-label"
-    :data-content="serviceData.name"
   >
     <i
       class="icon"
-      :class="serviceData.code"
+      :class="serviceCode"
     />
   </div>
 </template>
@@ -23,8 +22,20 @@ export default {
   computed: {
     popupOptions () {
       return {
-        position: 'top center'
+        position: 'top center',
+        transition: 'fade up',
+        variation: 'basic',
+        html: this.serviceNameStrong
       }
+    },
+    serviceNameStrong () {
+      return `<strong>${this.serviceName}</strong>`
+    },
+    serviceName () {
+      return this.serviceData.name
+    },
+    serviceCode () {
+      return this.serviceData.code
     }
   },
   mounted () {
