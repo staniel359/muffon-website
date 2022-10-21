@@ -30,12 +30,22 @@ export default {
           text: 'Email'
         },
         {
+          icon: 'telegram plane',
+          link: 'https://t.me/staniel359',
+          text: 'Telegram'
+        },
+        {
           icon: 'vk',
           link: 'https://vk.com/id223233444',
           text: 'VK'
         },
         {
-          icon: 'facebook',
+          icon: 'linkedin in',
+          link: 'https://www.linkedin.com/in/aleksey-shpakovsky-075b53138/',
+          text: 'LinkedIn'
+        },
+        {
+          icon: 'facebook f',
           link: 'https://www.facebook.com/profile.php?id=100076400978640',
           text: 'Facebook'
         },
