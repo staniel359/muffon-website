@@ -40,6 +40,7 @@ export default {
     dropdownOptions () {
       return {
         on: 'hover',
+        transition: 'fade up',
         delay: {
           show: 0,
           hide: 150

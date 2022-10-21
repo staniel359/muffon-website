@@ -8,14 +8,10 @@ import '../semantic/dist/semantic.min.css'
 import '*/assets/styles/Main.sass'
 import '*/assets/styles/Sources.sass'
 
-const app =
-  createApp(
-    App
-  )
-
-app
-  .use(
-    i18n
-  ).mount(
-    '#app'
-  )
+createApp(
+  App
+).use(
+  i18n
+).mount(
+  '#app'
+)
