@@ -1,10 +1,9 @@
 <template>
-  <div v-if="filesData">
+  <div v-if="files">
     <ButtonsBlock
       v-if="fileData"
-      :files-data="filesData"
       :file-data="fileData"
-      :system-code="systemCode"
+      :files="files"
     />
     <div
       v-else
@@ -18,6 +17,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import ButtonsBlock from './DownloadButton/ButtonsBlock.vue'
 
 export default {
@@ -27,47 +27,36 @@ export default {
   },
   data () {
     return {
-      filesData: null,
+      files: null,
       latestReleaseLink:
-        'https://api.github.com/repos/staniel359/muffon/releases/latest'
+        'https://api.github.com/repos/staniel359/muffon/releases/latest',
+      defaultExtensionsData: {
+        win: 'exe',
+        mac: 'pkg',
+        linux: 'deb'
+      }
     }
   },
   computed: {
     fileData () {
-      return this.filesData[
+      return this.files.find(
+        this.isPrimaryFile
+      )
+    },
+    systemDefaultExtension () {
+      return this.defaultExtensionsData[
         this.systemCode
       ]
     },
     systemCode () {
-      if (this.isWindows) {
-        return 'win'
-      } else if (this.isMac) {
-        return 'mac'
-      } else if (this.isLinux) {
-        return 'linux'
-      } else {
-        return null
-      }
-    },
-    isWindows () {
-      return this.platform.includes(
-        'Win'
-      )
+      return this.platform.match(
+        /Win|Mac|Linux/
+      )?.[0]?.toLowerCase()
     },
     platform () {
       return (
         navigator.userAgentData?.platform ||
           navigator.platform
-      )
-    },
-    isMac () {
-      return this.platform.includes(
-        'Mac'
-      )
-    },
-    isLinux () {
-      return this.platform.includes(
-        'Linux'
       )
     },
     notSupportedText () {
@@ -81,70 +70,100 @@ export default {
   },
   methods: {
     getLatestReleaseData () {
-      fetch(
+      axios.get(
         this.latestReleaseLink
       ).then(
-        this.formatResponse
-      ).then(
-        this.formatResponseData
+        this.handleSuccess
+      ).catch(
+        this.handleError
       )
     },
-    formatResponse (
-      value
+    handleSuccess (
+      response
     ) {
-      return value.json()
-    },
-    formatResponseData (
-      value
-    ) {
-      const releases = value.assets
+      const files = response.data.assets
 
-      const releasesFormatted =
-        releases.map(
-          this.formatReleaseData
+      this.files = files.map(
+        this.formatFileData
+      )
+    },
+    formatFileData (
+      fileData
+    ) {
+      const {
+        name
+      } = fileData
+
+      // const systemCode =
+      //   name.match(
+      //     /win|mac|linux/
+      //   )[0]
+
+      const extension =
+        name.split(
+          '.'
+        ).at(
+          -1
         )
 
-      const [
-        win,
-        mac,
-        linux
-      ] = releasesFormatted
+      // Temporary
 
-      this.filesData = {
-        win,
-        mac,
-        linux
-      }
-    },
-    formatReleaseData (
-      value
-    ) {
+      const systemCode = {
+        exe: 'win',
+        pkg: 'mac',
+        deb: 'linux'
+      }[extension]
+
+      const size =
+        this.formatSize(
+          fileData.size
+        )
+
+      const link =
+        fileData.browser_download_url
+
+      const isPrimary = (
+        systemCode ===
+          this.systemCode
+      ) && (
+        extension ===
+          this.systemDefaultExtension
+      )
+
       return {
-        name: value.name,
-        size: this.formatSize(
-          value.size
-        ),
-        link:
-          value.browser_download_url
+        name,
+        systemCode,
+        extension,
+        size,
+        link,
+        isPrimary
       }
     },
     formatSize (
-      value
+      size
     ) {
       return Math.floor(
-        value / (
+        size / (
           1024 * 1024
         )
       )
+    },
+    handleError () {
+      this.retryGetLatestReleaseData()
+    },
+    retryGetLatestReleaseData () {
+      setTimeout(
+        this.getLatestReleaseData,
+        1000
+      )
+    },
+    isPrimaryFile (
+      fileData
+    ) {
+      return !!fileData.isPrimary
     }
   }
 }
 </script>
 
-<style lang="sass" scoped>
-::v-deep(.download-title)
-  margin-bottom: 0.25em
-
-::v-deep(.download-file-name-size)
-  font-weight: 100
-</style>
+<style lang="sass" scoped></style>

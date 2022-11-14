@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import i18n from '*/plugins/i18n'
+import i18n from '@/plugins/i18n'
 import LocaleOption from './LanguageSelectItem/LocaleOption.vue'
-import locales from '*/data/locales'
+import locales from '@/data/locales'
 
 export default {
   name: 'LanguageSelectItem',

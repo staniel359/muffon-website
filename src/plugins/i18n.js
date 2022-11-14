@@ -1,7 +1,7 @@
 import {
   createI18n
 } from 'vue-i18n'
-import locales from '*/data/locales'
+import locales from '@/data/locales'
 
 function formatLocale (
   {
@@ -10,7 +10,7 @@ function formatLocale (
 ) {
   const locale =
     require(
-      `*/data/locales/${code}.json`
+      `@/data/locales/${code}.json`
     )
 
   return [

@@ -6,35 +6,33 @@
     <i class="dropdown icon" />
 
     <div class="menu">
-      <SystemItem
-        v-for="systemData in systems"
-        :key="systemData.code"
-        :system-data="systemData"
-        :system-code="systemCode"
-        :file-data="filesData[systemData.code]"
-      />
+      <template
+        v-for="(fileData, index) in files"
+        :key="index"
+      >
+        <BaseDownloadItem
+          v-if="!fileData.isPrimary"
+          class="item"
+          :file-data="fileData"
+        />
+      </template>
     </div>
   </div>
 </template>
 
 <script>
-import SystemItem from './ExtraButton/SystemItem.vue'
+import BaseDownloadItem from '@/components/shared/BaseDownloadItem.vue'
 
 export default {
   name: 'ExtraButton',
   components: {
-    SystemItem
+    BaseDownloadItem
   },
   props: {
-    filesData: {
-      type: Object,
-      required: true
-    },
-    systems: {
+    files: {
       type: Array,
       required: true
-    },
-    systemCode: String
+    }
   },
   computed: {
     dropdownOptions () {

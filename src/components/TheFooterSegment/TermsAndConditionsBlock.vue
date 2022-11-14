@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import termsAndConditionsText from '*/data/text/termsAndConditions.txt'
+import termsAndConditionsText from '@/data/text/termsAndConditions.txt'
 
 export default {
   name: 'TermsAndConditionsBlock',

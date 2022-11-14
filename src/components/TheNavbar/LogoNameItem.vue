@@ -27,7 +27,7 @@ export default {
   computed: {
     logo () {
       return require(
-        '*/assets/images/logo.png'
+        '@/assets/images/logo.png'
       )
     }
   }

@@ -30,7 +30,7 @@ export default {
   computed: {
     topImage () {
       return require(
-        '*/assets/images/main.png'
+        '@/assets/images/main.png'
       )
     }
   }

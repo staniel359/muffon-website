@@ -22,15 +22,7 @@ module.exports = {
           jQuery: 'jquery'
         }
       )
-    ],
-    resolve: {
-      alias: {
-        '*': path.resolve(
-          __dirname,
-          './src'
-        )
-      }
-    }
+    ]
   },
   css: {
     loaderOptions: {

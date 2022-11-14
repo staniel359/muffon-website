@@ -34,7 +34,8 @@
     "transition",
     "dimmer",
     "site",
-    "reset"
+    "reset",
+    "loader"
   ],
   "version": "2.9.0"
 }

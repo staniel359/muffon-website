@@ -1,15 +1,16 @@
 <template>
   <a
-    class="ui button"
     :href="fileLink"
   >
     <div class="download-title">
       <i
         class="icon"
-        :class="systemIcon"
+        :class="fileSystemIcon"
       />
 
-      {{ downloadText }}
+      {{ textFormatted }}
+
+      {{ fileExtensionFormatted }}
     </div>
 
     <small class="download-file-name-size">
@@ -21,44 +22,55 @@
 </template>
 
 <script>
+import systems from '@/data/systems'
+
 export default {
-  name: 'PrimaryButton',
+  name: 'BaseDownloadItem',
   props: {
     fileData: {
       type: Object,
       required: true
     },
-    systems: {
-      type: Array,
-      required: true
-    },
-    systemCode: {
-      type: String,
-      required: true
-    }
+    isPrimary: Boolean
   },
   computed: {
     fileLink () {
       return this.fileData.link
     },
-    systemIcon () {
-      return this.systemData.icon
+    fileSystemIcon () {
+      return this.fileSystemData.icon
     },
-    systemData () {
-      return this.systems.find(
+    fileSystemData () {
+      return systems.find(
         this.isMatchedSystem
       )
+    },
+    fileSystemCode () {
+      return this.fileData.systemCode
+    },
+    textFormatted () {
+      if (this.isPrimary) {
+        return this.downloadText
+      } else {
+        return this.fileSystemName
+      }
     },
     downloadText () {
       return this.$t(
         'download',
         {
-          systemName: this.systemName
+          systemName: this.fileSystemName
         }
       )
     },
-    systemName () {
-      return this.systemData.name
+    fileSystemName () {
+      return this.fileSystemData.name
+    },
+    fileExtensionFormatted () {
+      return `(.${this.fileExtension})`
+    },
+    fileExtension () {
+      return this.fileData.extension
     },
     fileName () {
       return this.fileData.name
@@ -81,11 +93,17 @@ export default {
     ) {
       return (
         systemData.code ===
-          this.systemCode
+          this.fileSystemCode
       )
     }
   }
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+.download-title
+  margin-bottom: 0.25em
+
+.download-file-name-size
+  font-weight: 100
+</style>

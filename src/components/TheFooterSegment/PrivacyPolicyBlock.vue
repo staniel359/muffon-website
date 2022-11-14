@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import privacyPolicyText from '*/data/text/privacyPolicy.txt'
+import privacyPolicyText from '@/data/text/privacyPolicy.txt'
 
 export default {
   name: 'PrivacyPolicyBlock',

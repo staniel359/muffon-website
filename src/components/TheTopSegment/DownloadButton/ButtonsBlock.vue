@@ -1,54 +1,30 @@
 <template>
   <div class="ui primary large buttons">
-    <PrimaryButton
+    <BaseDownloadItem
+      class="ui button"
       :file-data="fileData"
-      :systems="systems"
-      :system-code="systemCode"
+      is-primary
     />
 
     <ExtraButton
-      :files-data="filesData"
-      :systems="systems"
-      :system-code="systemCode"
+      :files="files"
     />
   </div>
 </template>
 
 <script>
-import PrimaryButton from './ButtonsBlock/PrimaryButton.vue'
+import BaseDownloadItem from '@/components/shared/BaseDownloadItem.vue'
 import ExtraButton from './ButtonsBlock/ExtraButton.vue'
 
 export default {
   name: 'ButtonsBlock',
   components: {
-    PrimaryButton,
+    BaseDownloadItem,
     ExtraButton
   },
   props: {
-    filesData: Object,
     fileData: Object,
-    systemCode: String
-  },
-  data () {
-    return {
-      systems: [
-        {
-          code: 'win',
-          name: 'Windows',
-          icon: 'windows'
-        },
-        {
-          code: 'mac',
-          name: 'MacOS',
-          icon: 'apple'
-        },
-        {
-          code: 'linux',
-          name: 'Linux',
-          icon: 'linux'
-        }
-      ]
-    }
+    files: Array
   }
 }
 </script>
