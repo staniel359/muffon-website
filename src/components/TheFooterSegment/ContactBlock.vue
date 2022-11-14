@@ -1,42 +1,32 @@
 <template>
-  <div
-    class="footer-link main-link"
-    @click="handleClick"
-  >
-    <h4
-      class="ui inverted header main-header"
-      v-text="contactHeaderText"
-    />
-
-    <ContactModal
-      ref="modal"
-    />
+  <div class="footer-link">
+    <h4 class="ui inverted header main-header">
+      <a
+        class="main-link"
+        target="_blank"
+        :href="contactLink"
+        v-text="contactText"
+      />
+    </h4>
   </div>
 </template>
 
 <script>
-import ContactModal from './ContactBlock/ContactModal.vue'
-
 export default {
   name: 'ContactBlock',
-  components: {
-    ContactModal
-  },
   computed: {
-    contactHeaderText () {
+    contactLink () {
+      return this.info.author.url
+    },
+    info () {
+      return require(
+        '@/../package.json'
+      )
+    },
+    contactText () {
       return this.$t(
         'footer.contact'
       )
-    }
-  },
-  methods: {
-    handleClick () {
-      this.showModal()
-    },
-    showModal () {
-      this.$refs
-        .modal
-        .show()
     }
   }
 }

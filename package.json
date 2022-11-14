@@ -2,6 +2,11 @@
   "name": "muffon-website",
   "version": "0.1.0",
   "license": "MIT",
+  "author": {
+    "name": "Aleksey Shpakovsky",
+    "email": "staniel359@gmail.com",
+    "url": "https://github.com/staniel359"
+  },
   "scripts": {
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
