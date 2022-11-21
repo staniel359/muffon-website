@@ -94,10 +94,10 @@ export default {
         name
       } = fileData
 
-      // const systemCode =
-      //   name.match(
-      //     /win|mac|linux/
-      //   )[0]
+      const systemCode =
+        name.match(
+          /win|mac|linux/
+        )[0]
 
       const extension =
         name.split(
@@ -105,14 +105,6 @@ export default {
         ).at(
           -1
         )
-
-      // Temporary
-
-      const systemCode = {
-        exe: 'win',
-        pkg: 'mac',
-        deb: 'linux'
-      }[extension]
 
       const size =
         this.formatSize(
@@ -122,12 +114,19 @@ export default {
       const link =
         fileData.browser_download_url
 
+      const isPortable =
+        !!name.match(
+          'portable'
+        )
+
       const isPrimary = (
         systemCode ===
           this.systemCode
       ) && (
         extension ===
           this.systemDefaultExtension
+      ) && (
+        !isPortable
       )
 
       return {
@@ -136,7 +135,8 @@ export default {
         extension,
         size,
         link,
-        isPrimary
+        isPrimary,
+        isPortable
       }
     },
     formatSize (

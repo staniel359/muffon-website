@@ -1,7 +1,7 @@
 <template>
   <div
     ref="button"
-    class="ui floating dropdown icon button extra-button"
+    class="ui floating scrolling dropdown icon button extra-button"
   >
     <i class="dropdown icon" />
 
@@ -60,4 +60,6 @@ export default {
 .extra-button
   display: flex !important
   align-items: center
+  .menu
+    max-height: 200px !important
 </style>
