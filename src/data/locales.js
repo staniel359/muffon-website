@@ -9,6 +9,10 @@ export default [
     isMain: true
   },
   {
+    code: 'de',
+    name: 'Deutsch'
+  },
+  {
     code: 'it',
     name: 'Italiano'
   },
