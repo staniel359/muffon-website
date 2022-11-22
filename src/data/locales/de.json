@@ -32,7 +32,7 @@
       },
       "videos": {
         "header": "Videos",
-        "subheader": "Videowiedergabe, Varianten, Kanäle und Ähnliche Videos"
+        "subheader": "Videowiedergabe, Varianten, Kanäle und ähnliche Videos"
       },
       "lyrics": {
         "header": "Lyrics",
@@ -62,7 +62,7 @@
       },
       "recommendations": {
         "header": "Vorschläge",
-        "subheader": "Mit Filten"
+        "subheader": "Mit Filtren"
       },
       "playlists": {
         "header": "Playlisten",
