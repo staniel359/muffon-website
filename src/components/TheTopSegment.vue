@@ -50,4 +50,6 @@ export default {
 .top-image-container
   margin-left: 4em
   flex: 0.6
+  .image
+    border-radius: 0.75em !important
 </style>
