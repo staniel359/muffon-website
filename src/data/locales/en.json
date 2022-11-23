@@ -3,6 +3,7 @@
   "download": "Download for {systemName}",
   "fileSize": "({size} Mb)",
   "notSupported": "Sorry, muffon in not supported by your system.",
+  "downloads": "{count} downloads",
   "services": "All services in one place",
   "downloadNow": "Download now",
   "donate": "Donate",

@@ -9,6 +9,10 @@
       v-else
       v-text="notSupportedText"
     />
+
+    <DownloadsSection
+      :files="files"
+    />
   </div>
   <div
     v-else
@@ -19,11 +23,13 @@
 <script>
 import axios from 'axios'
 import ButtonsBlock from './DownloadButton/ButtonsBlock.vue'
+import DownloadsSection from './DownloadButton/DownloadsSection.vue'
 
 export default {
   name: 'DownloadButton',
   components: {
-    ButtonsBlock
+    ButtonsBlock,
+    DownloadsSection
   },
   data () {
     return {
@@ -114,6 +120,9 @@ export default {
       const link =
         fileData.browser_download_url
 
+      const downloadsCount =
+        fileData.download_count
+
       const isPortable =
         !!name.match(
           'portable'
@@ -135,6 +144,7 @@ export default {
         extension,
         size,
         link,
+        downloadsCount,
         isPrimary,
         isPortable
       }
