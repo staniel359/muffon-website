@@ -1,13 +1,18 @@
 <template>
   <div class="downloads-section">
-    <h4
-      class="ui inverted header"
-      v-html="downloadsText"
-    />
+    <div class="ui basic large inverted label downloads-label">
+      <i class="download icon" />
+
+      <span
+        v-html="downloadsCountFormatted"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import i18n from '@/plugins/i18n'
+
 export default {
   name: 'DownloadsSection',
   props: {
@@ -17,12 +22,9 @@ export default {
     }
   },
   computed: {
-    downloadsText () {
-      return this.$t(
-        'downloads',
-        {
-          count: this.downloadsCount
-        }
+    downloadsCountFormatted () {
+      return this.downloadsCount.toLocaleString(
+        this.language
       )
     },
     downloadsCount () {
@@ -34,6 +36,9 @@ export default {
       return this.files.map(
         this.formatDownloadsCount
       )
+    },
+    language () {
+      return i18n.global.locale
     }
   },
   methods: {
@@ -54,5 +59,10 @@ export default {
 
 <style lang="sass" scoped>
 .downloads-section
-  margin-top: 2em
+  margin-top: 1.5em
+
+.downloads-label
+  &:hover
+    color: unset !important
+    cursor: default
 </style>

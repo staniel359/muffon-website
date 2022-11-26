@@ -3,7 +3,6 @@
   "download": "Скачать для {systemName}",
   "fileSize": "({size} Мб)",
   "notSupported": "Извините, muffon не поддерживается Вашей системой.",
-  "downloads": "{count} скачиваний",
   "services": "Все сервисы в одном месте",
   "downloadNow": "Скачайте уже сейчас",
   "donate": "Пожертвовать",

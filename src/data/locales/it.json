@@ -3,7 +3,6 @@
   "download": "Scarica per {systemName}",
   "fileSize": "({size} Mb)",
   "notSupported": "Ci dispiace, ma Muffon non è supportato dal tuo computer.",
-  "downloads": "{count} download",
   "services": "Tutti i servizi in un unico posto",
   "downloadNow": "Scarica adesso",
   "donate": "Dona",

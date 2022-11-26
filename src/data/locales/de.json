@@ -3,7 +3,6 @@
   "download": "Download für {systemName}",
   "fileSize": "({size} Mb)",
   "notSupported": "Sorry, muffon wird von Ihrem System nicht unterstützt.",
-  "downloads": "{count} Downloads",
   "services": "Alle Dienste in einer App",
   "downloadNow": "Jetzt Herunterladen",
   "donate": "Spenden",

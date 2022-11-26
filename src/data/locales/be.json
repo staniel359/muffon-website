@@ -3,7 +3,6 @@
   "download": "Спампаваць для {systemName}",
   "fileSize": "({size} Мб)",
   "notSupported": "Выбачайце, muffon не падтрымліваецца Вашай сістэмай.",
-  "downloads": "{count} запамповак",
   "services": "Усе сервісы у адным месцы",
   "downloadNow": "Спампуйце ўжо зараз",
   "donate": "Ахвяраваць",
