@@ -1,5 +1,8 @@
 <template>
-  <div class="ui segment main-segment">
+  <div
+    ref="segment"
+    class="ui segment main-segment"
+  >
     <div class="ui container main-container the-features-container">
       <HeaderSection />
 
@@ -32,6 +35,8 @@ export default {
   },
   data () {
     return {
+      navbarHeight: 77,
+      marginTop: -10,
       selected: 'basic',
       categories: [
         {
@@ -49,11 +54,33 @@ export default {
       ]
     }
   },
+  computed: {
+    offsetTop () {
+      return (
+        this.segmentTop -
+          this.navbarHeight -
+          this.marginTop
+      )
+    },
+    segmentTop () {
+      return $(
+        this.$refs.segment
+      ).offset().top
+    }
+  },
   methods: {
     handleCategoryButtonClick (
       value
     ) {
       this.selected = value
+
+      this.focusOnSegment()
+    },
+    focusOnSegment () {
+      window.scrollTo(
+        0,
+        this.offsetTop
+      )
     }
   }
 }
