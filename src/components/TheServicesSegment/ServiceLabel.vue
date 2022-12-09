@@ -1,7 +1,7 @@
 <template>
   <div
     ref="label"
-    class="ui circular icon label service-label"
+    class="ui circular icon inverted label service-label"
   >
     <i
       class="icon"
@@ -21,11 +21,16 @@ export default {
   },
   computed: {
     popupOptions () {
+      const className = 'ui popup main-popup'
+
       return {
         position: 'top center',
         transition: 'fade up',
-        variation: 'basic',
-        html: this.serviceNameStrong
+        variation: 'basic inverted',
+        html: this.serviceNameStrong,
+        className: {
+          popup: className
+        }
       }
     },
     serviceNameStrong () {
@@ -50,5 +55,9 @@ export default {
 
 <style lang="sass" scoped>
 .service-label
-  background: white !important
+  &:not(.inverted)
+    background: white !important
+  &.inverted
+    background: $colorBlack !important
+    border: $borderInverted
 </style>
