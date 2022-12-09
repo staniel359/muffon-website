@@ -11,7 +11,7 @@
     />
 
     <DownloadsSection
-      :files="files"
+      :releases="releases"
     />
   </div>
   <div
@@ -33,9 +33,10 @@ export default {
   },
   data () {
     return {
+      releases: null,
       files: null,
-      latestReleaseLink:
-        'https://api.github.com/repos/staniel359/muffon/releases/latest',
+      releasesLink:
+        'https://api.github.com/repos/staniel359/muffon/releases',
       defaultExtensionsData: {
         win: 'exe',
         mac: 'pkg',
@@ -77,7 +78,7 @@ export default {
   methods: {
     getLatestReleaseData () {
       axios.get(
-        this.latestReleaseLink
+        this.releasesLink
       ).then(
         this.handleSuccess
       ).catch(
@@ -87,7 +88,9 @@ export default {
     handleSuccess (
       response
     ) {
-      const files = response.data.assets
+      this.releases = response.data
+
+      const files = this.releases[0].assets
 
       this.files = files.map(
         this.formatFileData

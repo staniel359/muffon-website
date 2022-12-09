@@ -16,7 +16,7 @@ import i18n from '@/plugins/i18n'
 export default {
   name: 'DownloadsSection',
   props: {
-    files: {
+    releases: {
       type: Array,
       required: true
     }
@@ -33,8 +33,8 @@ export default {
       )
     },
     downloadsCounts () {
-      return this.files.map(
-        this.formatDownloadsCount
+      return this.releases.flatMap(
+        this.formatReleaseData
       )
     },
     language () {
@@ -42,10 +42,17 @@ export default {
     }
   },
   methods: {
-    formatDownloadsCount (
-      fileData
+    formatReleaseData (
+      releaseData
     ) {
-      return fileData.downloadsCount
+      return releaseData.assets.map(
+        this.formatAssetData
+      )
+    },
+    formatAssetData (
+      assetData
+    ) {
+      return assetData.download_count
     },
     sum (
       first,
