@@ -22,7 +22,7 @@ export default {
       features: [
         {
           code: 'share',
-          icon: 'share'
+          icon: 'share alternate'
         },
         {
           code: 'post',
@@ -30,7 +30,7 @@ export default {
         },
         {
           code: 'follow',
-          icon: 'user friends'
+          icon: 'user plus'
         },
         {
           code: 'message',
@@ -38,7 +38,7 @@ export default {
         },
         {
           code: 'feed',
-          icon: 'newspaper'
+          icon: 'newspaper outline'
         },
         {
           code: 'communities',

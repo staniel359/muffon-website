@@ -26,11 +26,11 @@ export default {
         },
         {
           code: 'recommendations',
-          icon: 'volume up'
+          icon: 'bullhorn'
         },
         {
           code: 'playlists',
-          icon: 'file audio'
+          icon: 'file audio outline'
         },
         {
           code: 'favorites',
@@ -50,7 +50,7 @@ export default {
         },
         {
           code: 'customize',
-          icon: 'image'
+          icon: 'palette'
         }
       ]
     }

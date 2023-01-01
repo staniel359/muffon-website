@@ -26,7 +26,7 @@ export default {
         },
         {
           code: 'scrobble',
-          icon: 'lastfm square'
+          icon: 'lastfm'
         },
         {
           code: 'search',
@@ -38,11 +38,11 @@ export default {
         },
         {
           code: 'videos',
-          icon: 'tv'
+          icon: 'film'
         },
         {
           code: 'lyrics',
-          icon: 'file alternate'
+          icon: 'file alternate outline'
         },
         {
           code: 'tags',
@@ -54,7 +54,7 @@ export default {
         },
         {
           code: 'releases',
-          icon: 'record vinyl'
+          icon: 'compact disc'
         },
         {
           code: 'multitag',
