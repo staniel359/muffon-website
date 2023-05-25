@@ -20,6 +20,7 @@
 <script>
 import HeaderSection from './TheTopSegment/HeaderSection.vue'
 import DownloadButton from './TheTopSegment/DownloadButton.vue'
+import topImage from '@/assets/images/main.png'
 
 export default {
   name: 'TheTopSegment',
@@ -29,9 +30,7 @@ export default {
   },
   computed: {
     topImage () {
-      return require(
-        '@/assets/images/main.png'
-      )
+      return topImage
     }
   }
 }

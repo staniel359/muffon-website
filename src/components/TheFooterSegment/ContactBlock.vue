@@ -12,16 +12,13 @@
 </template>
 
 <script>
+import info from '@/../package.json'
+
 export default {
   name: 'ContactBlock',
   computed: {
     contactLink () {
-      return this.info.author.url
-    },
-    info () {
-      return require(
-        '@/../package.json'
-      )
+      return info.author.url
     },
     contactText () {
       return this.$t(

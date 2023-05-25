@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import logo from '@/assets/images/logo.png'
+
 export default {
   name: 'LogoNameItem',
   data () {
@@ -26,9 +28,7 @@ export default {
   },
   computed: {
     logo () {
-      return require(
-        '@/assets/images/logo.png'
-      )
+      return logo
     }
   }
 }

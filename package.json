@@ -8,33 +8,24 @@
     "url": "https://github.com/staniel359"
   },
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
     "axios": "^1.3.1",
-    "core-js": "^3.27.2",
     "fomantic-ui": "^2.9.1",
-    "raw-loader": "^4.0.2",
     "vue": "^3.2.47",
     "vue-i18n": "^9.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/eslint-parser": "^7.19.1",
     "@intlify/vue-i18n-loader": "^4.2.0",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
+    "@rollup/plugin-inject": "^5.0.3",
+    "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-standard": "^8.0.1",
     "eslint": "^8.33.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.9.0",
     "sass": "^1.58.0",
-    "sass-loader": "^13.2.0",
-    "vue-cli-plugin-i18n": "~2.3.1"
+    "vite": "^4.3.8"
   }
 }
