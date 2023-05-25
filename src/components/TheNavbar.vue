@@ -5,8 +5,6 @@
 
       <div class="right menu">
         <GithubItem />
-
-        <LanguageSelectItem />
       </div>
     </div>
   </div>
@@ -15,14 +13,12 @@
 <script>
 import LogoNameItem from './TheNavbar/LogoNameItem.vue'
 import GithubItem from './TheNavbar/GithubItem.vue'
-import LanguageSelectItem from './TheNavbar/LanguageSelectItem.vue'
 
 export default {
   name: 'TheNavbar',
   components: {
     LogoNameItem,
-    GithubItem,
-    LanguageSelectItem
+    GithubItem
   }
 }
 </script>
