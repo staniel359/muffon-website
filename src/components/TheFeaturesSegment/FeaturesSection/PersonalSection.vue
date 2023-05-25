@@ -1,5 +1,5 @@
 <template>
-  <div class="ui center aligned three column stackable relaxed padded grid">
+  <div class="ui center aligned three column stackable doubling relaxed padded grid">
     <FeatureItem
       v-for="featureData in features"
       :key="featureData.code"
@@ -29,6 +29,10 @@ export default {
           icon: 'bullhorn'
         },
         {
+          code: 'scrobble',
+          icon: 'lastfm'
+        },
+        {
           code: 'playlists',
           icon: 'file audio outline'
         },
@@ -43,14 +47,6 @@ export default {
         {
           code: 'listened',
           icon: 'check'
-        },
-        {
-          code: 'savedTracks',
-          icon: 'save'
-        },
-        {
-          code: 'customize',
-          icon: 'palette'
         }
       ]
     }

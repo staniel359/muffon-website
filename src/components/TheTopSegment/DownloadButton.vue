@@ -148,8 +148,7 @@ export default {
         size,
         link,
         downloadsCount,
-        isPrimary,
-        isPortable
+        isPrimary
       }
     },
     formatSize (

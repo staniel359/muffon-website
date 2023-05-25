@@ -1,6 +1,6 @@
 <template>
   <div class="footer-link">
-    <h4 class="ui inverted header main-header">
+    <h4 class="ui header main-header">
       <a
         class="main-link"
         target="_blank"

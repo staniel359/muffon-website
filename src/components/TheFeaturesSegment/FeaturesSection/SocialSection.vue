@@ -1,5 +1,5 @@
 <template>
-  <div class="ui center aligned three column stackable relaxed padded grid">
+  <div class="ui center aligned three column stackable doubling relaxed padded grid">
     <FeatureItem
       v-for="featureData in features"
       :key="featureData.code"

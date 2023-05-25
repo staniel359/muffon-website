@@ -9,7 +9,7 @@
 
     <div class="name-container">
       <h1
-        class="ui inverted header"
+        class="ui header main-header"
         v-text="appName"
       />
     </div>
@@ -39,5 +39,10 @@ export default {
   width: 50px
 
 .name-container
-  margin-left: 1em
+  margin-left: 0.9em
+  .main-header
+    font-family: 'Nunito'
+    font-weight: 500
+    font-size: 2.3em
+    margin-bottom: 0.15em !important
 </style>

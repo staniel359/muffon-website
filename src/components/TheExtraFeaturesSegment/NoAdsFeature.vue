@@ -1,6 +1,6 @@
 <template>
-  <div class="feature-item">
-    <h2 class="ui inverted header main-header">
+  <div class="column extra-feature-item">
+    <h2 class="ui header main-header">
       <i class="icons">
         <i class="large red dont icon" />
 

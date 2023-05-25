@@ -28,7 +28,7 @@ export default {
       if (this.isSelected) {
         return 'primary'
       } else {
-        return 'basic inverted'
+        return 'basic'
       }
     },
     isSelected () {

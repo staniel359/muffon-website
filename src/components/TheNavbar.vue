@@ -1,6 +1,6 @@
 <template>
-  <div class="ui top fixed borderless inverted menu the-navbar">
-    <div class="ui container">
+  <div class="ui top fixed borderless menu">
+    <div class="ui container main-container navbar-container">
       <LogoNameItem />
 
       <div class="right menu">
@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.the-navbar
-  border-bottom: 1px solid $colorGreyInverted !important
+.navbar-container
+  padding-top: 0 !important
+  padding-bottom: 0 !important
 </style>

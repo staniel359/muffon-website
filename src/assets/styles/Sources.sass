@@ -6,10 +6,12 @@ $colorSoundCloud: #ff5500
 $colorSpotify: #1DB954
 $colorYouTube: #FF0000
 
-$yandexMusicIconUrl: url('@/assets/images/yandexmusic.png')
-$deezerIconUrl: url('@/assets/images/deezer.png')
-$discogsIconUrl: url('@/assets/images/discogs.png')
-$geniusIconUrl: url('@/assets/images/genius.png')
+$yandexMusicIconUrl: url('@/assets/icons/yandexmusic.png')
+$deezerIconUrl: url('@/assets/icons/deezer.png')
+$youtubeMusicIconUrl: url('@/assets/icons/youtubemusic.png')
+$discogsIconUrl: url('@/assets/icons/discogs.png')
+$geniusIconUrl: url('@/assets/icons/genius.png')
+$musicbrainzIconUrl: url('@/assets/icons/musicbrainz.png')
 
 .ui.label
   &:hover
@@ -32,6 +34,10 @@ $geniusIconUrl: url('@/assets/images/genius.png')
         color: $colorSoundCloud !important
       &.spotify
         color: $colorSpotify !important
+      &.youtubemusic
+        color: $colorYouTube !important
+        &:before
+          filter: none
       &.youtube
         color: $colorYouTube !important
       &.discogs
@@ -40,12 +46,17 @@ $geniusIconUrl: url('@/assets/images/genius.png')
       &.genius
         &:before
           filter: none
+      &.musicbrainz
+        &:before
+          filter: none
 
 i.icon
   &.yandexmusic,
   &.deezer,
+  &.youtubemusic,
   &.discogs,
-  &.genius
+  &.genius,
+  &.musicbrainz
     width: 20px
     height: 20px
     &:before
@@ -66,14 +77,26 @@ i.icon.deezer
     background-size: 100% !important
     filter: grayscale(1)
 
+i.icon.youtubemusic
+  &:before
+    background: $youtubeMusicIconUrl !important
+    background-size: 100% !important
+    filter: grayscale(1)
+
 i.icon.discogs
   &:before
     background: $discogsIconUrl !important
     background-size: 100% !important
-    filter: invert(1)
+    filter: grayscale(1)
 
 i.icon.genius
   &:before
     background: $geniusIconUrl !important
+    background-size: 100% !important
+    filter: grayscale(1)
+
+i.icon.musicbrainz
+  &:before
+    background: $musicbrainzIconUrl !important
     background-size: 100% !important
     filter: grayscale(1)

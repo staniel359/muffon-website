@@ -1,10 +1,15 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500')
+
+$colorBase: #804fb3
+
 html
   scroll-behavior: smooth
 
 .ui.header
   &.main-header
     margin: 0
+    color: rgba(0, 0, 0, 0.78)
     &:not(:first-child)
       margin-top: 1em
 
@@ -12,10 +17,6 @@ html
   &.main-segments
     border: none
     margin: 0
-    .ui.segment
-      &.main-segment
-        &:not(:first-child)
-          border-top: 1px solid $colorGreyInverted !important
 
 .ui.segment
   &.main-segment
@@ -46,5 +47,4 @@ html
     color: $colorBase !important
 
 .main-popup
-  &.inverted
-    border: $borderInverted !important
+  border: none !important

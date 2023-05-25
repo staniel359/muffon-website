@@ -1,6 +1,6 @@
 <template>
   <div class="column">
-    <h3 class="ui icon inverted header">
+    <h3 class="ui icon header">
       <i
         class="large icon"
         :class="icon"

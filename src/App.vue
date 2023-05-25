@@ -1,8 +1,10 @@
 <template>
   <TheNavbar />
 
-  <div class="ui inverted segments main-segments">
+  <div class="ui segments main-segments">
     <TheTopSegment />
+
+    <TheDescriptionSegment />
 
     <TheServicesSegment />
 
@@ -19,6 +21,7 @@
 <script>
 import TheNavbar from '@/components/TheNavbar.vue'
 import TheTopSegment from '@/components/TheTopSegment.vue'
+import TheDescriptionSegment from '@/components/TheDescriptionSegment.vue'
 import TheServicesSegment from '@/components/TheServicesSegment.vue'
 import TheFeaturesSegment from '@/components/TheFeaturesSegment.vue'
 import TheExtraFeaturesSegment from '@/components/TheExtraFeaturesSegment.vue'
@@ -30,6 +33,7 @@ export default {
   components: {
     TheNavbar,
     TheTopSegment,
+    TheDescriptionSegment,
     TheServicesSegment,
     TheFeaturesSegment,
     TheExtraFeaturesSegment,

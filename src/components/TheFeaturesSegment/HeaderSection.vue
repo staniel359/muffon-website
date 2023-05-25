@@ -1,7 +1,7 @@
 <template>
   <div class="header-section">
     <h1
-      class="ui inverted header main-header"
+      class="ui header main-header"
       v-text="featuresText"
     />
   </div>

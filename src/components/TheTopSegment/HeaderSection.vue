@@ -1,7 +1,7 @@
 <template>
   <div class="header-section">
     <h1
-      class="ui inverted header title-header main-header"
+      class="ui header title-header main-header"
       v-text="titleText"
     />
   </div>
@@ -26,6 +26,6 @@ export default {
 
 .title-header
   color: white
-  font-size: 4em !important
+  font-size: 3.6em !important
   line-height: 1em !important
 </style>

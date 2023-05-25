@@ -1,15 +1,21 @@
 <template>
   <div class="ui segment main-segment">
     <div class="ui container the-top-container">
-      <div class="title-header-container">
+      <div
+        ref="leftSection"
+        class="title-header-container"
+      >
         <HeaderSection />
 
         <DownloadButton />
       </div>
 
-      <div class="top-image-container">
+      <div
+        ref="rightSection"
+        class="top-image-container"
+      >
         <img
-          class="ui image rounded"
+          class="ui image rounded bordered"
           :src="topImage"
         >
       </div>
@@ -31,7 +37,32 @@ export default {
   computed: {
     topImage () {
       return topImage
+    },
+    leftSectionTransitionOptions () {
+      return {
+        animation: 'fade right',
+        duration: 750
+      }
+    },
+    rightSectionTransitionOptions () {
+      return {
+        animation: 'fade up',
+        duration: 750
+      }
     }
+  },
+  mounted () {
+    $(
+      this.$refs.leftSection
+    ).transition(
+      this.leftSectionTransitionOptions
+    )
+
+    $(
+      this.$refs.rightSection
+    ).transition(
+      this.rightSectionTransitionOptions
+    )
   }
 }
 </script>
@@ -41,13 +72,16 @@ export default {
   padding: 10em 5em 5em
   display: flex !important
   align-items: center
+  height: 520px
 
 .title-header-container
+  visibility: hidden
   flex: 0.4
   text-align: right
 
 .top-image-container
-  margin-left: 4em
+  visibility: hidden
+  margin-left: 3em
   flex: 0.6
   .image
     border-radius: 0.75em !important

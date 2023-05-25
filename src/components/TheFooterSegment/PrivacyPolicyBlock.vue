@@ -4,7 +4,7 @@
     @click="handleClick"
   >
     <h4
-      class="ui inverted header main-header"
+      class="ui header main-header"
       v-text="privacyPolicyHeaderText"
     />
 
@@ -36,7 +36,8 @@ export default {
     },
     modalOptions () {
       return {
-        duration: 300
+        duration: 300,
+        autofocus: false
       }
     }
   },

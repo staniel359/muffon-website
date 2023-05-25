@@ -1,11 +1,30 @@
 <template>
-  <div class="ui segment main-segment">
+  <div
+    ref="segment"
+    class="ui segment main-segment"
+  >
     <div class="ui container main-container services-container">
       <HeaderSection />
 
       <div class="ui massive labels">
         <ServiceLabel
-          v-for="serviceData in services"
+          v-for="serviceData in streamingServices"
+          :key="serviceData.code"
+          :service-data="serviceData"
+        />
+      </div>
+
+      <div class="ui massive labels">
+        <ServiceLabel
+          v-for="serviceData in videoServices"
+          :key="serviceData.code"
+          :service-data="serviceData"
+        />
+      </div>
+
+      <div class="ui massive labels">
+        <ServiceLabel
+          v-for="serviceData in otherServices"
           :key="serviceData.code"
           :service-data="serviceData"
         />
@@ -26,11 +45,7 @@ export default {
   },
   data () {
     return {
-      services: [
-        {
-          code: 'lastfm',
-          name: 'Last.FM'
-        },
+      streamingServices: [
         {
           code: 'vk',
           name: 'VK'
@@ -44,6 +59,10 @@ export default {
           name: 'Yandex Music'
         },
         {
+          code: 'spotify',
+          name: 'Spotify'
+        },
+        {
           code: 'bandcamp',
           name: 'Bandcamp'
         },
@@ -54,14 +73,22 @@ export default {
         {
           code: 'soundcloud',
           name: 'SoundCloud'
-        },
+        }
+      ],
+      videoServices: [
         {
-          code: 'spotify',
-          name: 'Spotify'
+          code: 'youtubemusic',
+          name: 'YouTube Music'
         },
         {
           code: 'youtube',
           name: 'YouTube'
+        }
+      ],
+      otherServices: [
+        {
+          code: 'lastfm',
+          name: 'Last.FM'
         },
         {
           code: 'discogs',
@@ -70,8 +97,43 @@ export default {
         {
           code: 'genius',
           name: 'Genius'
+        },
+        {
+          code: 'musicbrainz',
+          name: 'MusicBrainz'
         }
       ]
+    }
+  },
+  computed: {
+    visibilityOptions () {
+      return {
+        onBottomVisible:
+          this.handleBottomVisible
+      }
+    },
+    transitionOptions () {
+      return {
+        animation: 'fade up',
+        duration: 500,
+        interval: 75
+      }
+    }
+  },
+  mounted () {
+    $(
+      this.$refs.segment
+    ).visibility(
+      this.visibilityOptions
+    )
+  },
+  methods: {
+    handleBottomVisible () {
+      $(
+        '.service-label'
+      ).transition(
+        this.transitionOptions
+      )
     }
   }
 }

@@ -11,12 +11,6 @@
       {{ textFormatted }}
 
       {{ fileExtensionFormatted }}
-
-      <template
-        v-if="isPortable"
-      >
-        (Portable)
-      </template>
     </div>
 
     <small class="download-file-name-size">
@@ -91,9 +85,6 @@ export default {
     },
     fileSize () {
       return this.fileData.size
-    },
-    isPortable () {
-      return this.fileData.isPortable
     }
   },
   methods: {

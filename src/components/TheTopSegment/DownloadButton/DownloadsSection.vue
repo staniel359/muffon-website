@@ -1,6 +1,6 @@
 <template>
   <div class="downloads-section">
-    <div class="ui basic large inverted label downloads-label">
+    <div class="ui basic large label downloads-label">
       <i class="download icon" />
 
       <span

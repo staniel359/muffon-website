@@ -4,12 +4,12 @@
       <i class="icons">
         <i class="large red dont icon" />
 
-        <i class="small envelope icon" />
+        <i class="small user icon" />
       </i>
 
       <div
         class="content"
-        v-text="noSpamText"
+        v-text="noLoginText"
       />
     </h2>
   </div>
@@ -17,11 +17,11 @@
 
 <script>
 export default {
-  name: 'NoSpamFeature',
+  name: 'NoLoginFeature',
   computed: {
-    noSpamText () {
+    noLoginText () {
       return this.$t(
-        'features.extra.noSpam'
+        'features.extra.noLogin'
       )
     }
   }
