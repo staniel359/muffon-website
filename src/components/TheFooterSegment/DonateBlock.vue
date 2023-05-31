@@ -17,7 +17,7 @@ export default {
   data () {
     return {
       donateLink:
-        'https://www.buymeacoffee.com/staniel359'
+        'https://ko-fi.com/staniel359'
     }
   },
   computed: {
