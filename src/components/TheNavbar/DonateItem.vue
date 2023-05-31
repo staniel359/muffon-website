@@ -1,22 +1,22 @@
 <template>
   <a
     class="icon item"
-    :href="githubLink"
+    :href="donateLink"
     target="_blank"
   >
     <i
-      class="github large icon"
+      class="kofi icon"
     />
   </a>
 </template>
 
 <script>
 export default {
-  name: 'GithubItem',
+  name: 'DonateItem',
   data () {
     return {
-      githubLink:
-        'https://github.com/staniel359/muffon'
+      donateLink:
+        'https://ko-fi.com/staniel359'
     }
   }
 }

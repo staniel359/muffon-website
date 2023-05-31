@@ -3,8 +3,22 @@
 
 $colorBase: #804fb3
 
+$kofiIconUrl: url('@/assets/icons/kofi.png')
+
 html
   scroll-behavior: smooth
+
+i.icon
+  &.kofi
+    width: 24px
+    height: 24px
+    &:before
+      content: ""
+      display: block
+      width: 24px
+      height: 24px
+      background: $kofiIconUrl !important
+      background-size: 100% !important
 
 .ui.header
   &.main-header

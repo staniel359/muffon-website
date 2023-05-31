@@ -5,6 +5,8 @@
 
       <div class="right menu">
         <GithubItem />
+
+        <DonateItem />
       </div>
     </div>
   </div>
@@ -13,12 +15,14 @@
 <script>
 import LogoNameItem from './TheNavbar/LogoNameItem.vue'
 import GithubItem from './TheNavbar/GithubItem.vue'
+import DonateItem from './TheNavbar/DonateItem.vue'
 
 export default {
   name: 'TheNavbar',
   components: {
     LogoNameItem,
-    GithubItem
+    GithubItem,
+    DonateItem
   }
 }
 </script>
