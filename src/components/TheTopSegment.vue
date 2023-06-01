@@ -15,7 +15,7 @@
         class="top-image-container"
       >
         <img
-          class="ui image rounded bordered"
+          class="ui image"
           :src="topImage"
         >
       </div>
@@ -26,7 +26,7 @@
 <script>
 import HeaderSection from './TheTopSegment/HeaderSection.vue'
 import DownloadButton from './TheTopSegment/DownloadButton.vue'
-import topImage from '@/assets/images/main.png'
+import topImage from '@/assets/images/preview.png'
 
 export default {
   name: 'TheTopSegment',
@@ -83,6 +83,4 @@ export default {
   visibility: hidden
   margin-left: 3em
   flex: 0.6
-  .image
-    border-radius: 0.75em !important
 </style>
