@@ -7,8 +7,6 @@
         <TermsAndConditionsBlock />
 
         <ContactBlock />
-
-        <DonateBlock />
       </div>
 
       <CopyrightSection />
@@ -21,7 +19,6 @@ import PrivacyPolicyBlock from './TheFooterSegment/PrivacyPolicyBlock.vue'
 import TermsAndConditionsBlock
   from './TheFooterSegment/TermsAndConditionsBlock.vue'
 import ContactBlock from './TheFooterSegment/ContactBlock.vue'
-import DonateBlock from './TheFooterSegment/DonateBlock.vue'
 import CopyrightSection from './TheFooterSegment/CopyrightSection.vue'
 
 export default {
@@ -30,7 +27,6 @@ export default {
     PrivacyPolicyBlock,
     TermsAndConditionsBlock,
     ContactBlock,
-    DonateBlock,
     CopyrightSection
   }
 }
