@@ -1,5 +1,7 @@
 <template>
-  <div v-if="files">
+  <div
+    v-if="files"
+  >
     <ButtonsBlock
       v-if="fileData"
       :file-data="fileData"
@@ -37,10 +39,10 @@ export default {
       files: null,
       releasesLink:
         'https://api.github.com/repos/staniel359/muffon/releases',
-      defaultExtensionsData: {
-        win: 'exe',
-        mac: 'pkg',
-        linux: 'deb'
+      defaultSuffixesData: {
+        win: 'win-x64.exe',
+        mac: 'mac-x64.pkg',
+        linux: 'linux-amd64.deb'
       }
     }
   },
@@ -50,15 +52,21 @@ export default {
         this.isPrimaryFile
       )
     },
-    systemDefaultExtension () {
-      return this.defaultExtensionsData[
-        this.systemCode
+    defaultSuffix () {
+      return this.defaultSuffixesData[
+        this.systemCodeFormatted
       ]
     },
+    systemCodeFormatted () {
+      return this.systemCode?.toLowerCase()
+    },
     systemCode () {
-      return this.platform.match(
-        /Win|Mac|Linux/
-      )?.[0]?.toLowerCase()
+      return this.platformFormatted.match(
+        /win|mac|linux/
+      )?.[0]
+    },
+    platformFormatted () {
+      return this.platform.toLowerCase()
     },
     platform () {
       return (
@@ -90,11 +98,13 @@ export default {
     ) {
       this.releases = response.data
 
-      const files = this.releases[0].assets
+      const files =
+        this.releases[0].assets
 
-      this.files = files.map(
-        this.formatFileData
-      )
+      this.files =
+        files.map(
+          this.formatFileData
+        )
     },
     formatFileData (
       fileData
@@ -126,19 +136,19 @@ export default {
       const downloadsCount =
         fileData.download_count
 
-      const isPortable =
-        !!name.match(
-          'portable'
+      const isMatchedSystem = (
+        systemCode ===
+          this.systemCodeFormatted
+      )
+
+      const isMatchedSuffix =
+        name.endsWith(
+          this.defaultSuffix
         )
 
       const isPrimary = (
-        systemCode ===
-          this.systemCode
-      ) && (
-        extension ===
-          this.systemDefaultExtension
-      ) && (
-        !isPortable
+        isMatchedSystem &&
+          isMatchedSuffix
       )
 
       return {
