@@ -6,6 +6,8 @@
       <div class="right menu">
         <GithubItem />
 
+        <DiscordItem />
+
         <DonateItem />
       </div>
     </div>
@@ -15,6 +17,7 @@
 <script>
 import LogoNameItem from './TheNavbar/LogoNameItem.vue'
 import GithubItem from './TheNavbar/GithubItem.vue'
+import DiscordItem from './TheNavbar/DiscordItem.vue'
 import DonateItem from './TheNavbar/DonateItem.vue'
 
 export default {
@@ -22,6 +25,7 @@ export default {
   components: {
     LogoNameItem,
     GithubItem,
+    DiscordItem,
     DonateItem
   }
 }
