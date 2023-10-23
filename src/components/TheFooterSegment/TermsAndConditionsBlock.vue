@@ -12,27 +12,35 @@
       ref="modal"
       class="ui tiny page modal"
     >
-      <div
-        class="scrolling content"
-        v-html="termsAndConditionsText"
-      />
+      <div class="scrolling content">
+        <div
+          class="ui basic segment"
+          :class="{
+            loading: isLoading
+          }"
+          v-html="termsAndConditionsText"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import termsAndConditionsText from '@/data/text/termsAndConditions.txt?raw'
+import axios from 'axios'
 
 export default {
   name: 'TermsAndConditionsBlock',
+  data () {
+    return {
+      isLoading: true,
+      termsAndConditionsText: null
+    }
+  },
   computed: {
     termsAndConditionsHeaderText () {
       return this.$t(
         'footer.termsAndConditions'
       )
-    },
-    termsAndConditionsText () {
-      return termsAndConditionsText
     },
     modalOptions () {
       return {
@@ -51,6 +59,22 @@ export default {
   methods: {
     handleClick () {
       this.showModal()
+
+      if (!this.termsAndConditionsText) {
+        axios.get(
+          'https://178-79-138-81.ip.linodeusercontent.com/api/legal/terms_and_conditions'
+        ).then(
+          this.handleSuccess
+        )
+      }
+    },
+    handleSuccess (
+      response
+    ) {
+      this.termsAndConditionsText =
+        response.data.legal.terms_and_conditions
+
+      this.isLoading = false
     },
     showModal () {
       $(

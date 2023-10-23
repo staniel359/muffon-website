@@ -12,27 +12,35 @@
       ref="modal"
       class="ui tiny page modal"
     >
-      <div
-        class="scrolling content"
-        v-html="privacyPolicyText"
-      />
+      <div class="scrolling content">
+        <div
+          class="ui basic segment"
+          :class="{
+            loading: isLoading
+          }"
+          v-html="privacyPolicyText"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import privacyPolicyText from '@/data/text/privacyPolicy.txt?raw'
+import axios from 'axios'
 
 export default {
   name: 'PrivacyPolicyBlock',
+  data () {
+    return {
+      isLoading: true,
+      privacyPolicyText: null
+    }
+  },
   computed: {
     privacyPolicyHeaderText () {
       return this.$t(
         'footer.privacyPolicy'
       )
-    },
-    privacyPolicyText () {
-      return privacyPolicyText
     },
     modalOptions () {
       return {
@@ -51,6 +59,22 @@ export default {
   methods: {
     handleClick () {
       this.showModal()
+
+      if (!this.privacyPolicyText) {
+        axios.get(
+          'https://178-79-138-81.ip.linodeusercontent.com/api/legal/privacy_policy'
+        ).then(
+          this.handleSuccess
+        )
+      }
+    },
+    handleSuccess (
+      response
+    ) {
+      this.privacyPolicyText =
+        response.data.legal.privacy_policy
+
+      this.isLoading = false
     },
     showModal () {
       $(
