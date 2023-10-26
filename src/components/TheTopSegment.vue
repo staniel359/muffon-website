@@ -15,9 +15,21 @@
         class="top-image-container"
       >
         <img
-          class="ui image"
+          class="ui image bordered"
           :src="topImage"
         >
+
+        <button
+          class="ui icon button basic circular dark-mode-toggle-button"
+          @click="handleToggleButtonClick"
+        >
+          <i
+            class="ui icon"
+            :class="[
+              toggleButtonClass
+            ]"
+          />
+        </button>
       </div>
     </div>
   </div>
@@ -26,7 +38,8 @@
 <script>
 import HeaderSection from './TheTopSegment/HeaderSection.vue'
 import DownloadButton from './TheTopSegment/DownloadButton.vue'
-import topImage from '@/assets/images/preview.png'
+import imageLight from '@/assets/images/preview_light.png'
+import imageDark from '@/assets/images/preview_dark.png'
 
 export default {
   name: 'TheTopSegment',
@@ -34,9 +47,16 @@ export default {
     HeaderSection,
     DownloadButton
   },
+  data () {
+    return {
+      isDarkMode: false
+    }
+  },
   computed: {
     topImage () {
-      return topImage
+      return (
+        this.isDarkMode ? imageDark : imageLight
+      )
     },
     leftSectionTransitionOptions () {
       return {
@@ -49,6 +69,11 @@ export default {
         animation: 'fade up',
         duration: 750
       }
+    },
+    toggleButtonClass () {
+      return (
+        this.isDarkMode ? 'sun' : 'moon'
+      )
     }
   },
   mounted () {
@@ -63,6 +88,12 @@ export default {
     ).transition(
       this.rightSectionTransitionOptions
     )
+  },
+  methods: {
+    handleToggleButtonClick () {
+      this.isDarkMode =
+        !this.isDarkMode
+    }
   }
 }
 </script>
@@ -80,7 +111,14 @@ export default {
   text-align: right
 
 .top-image-container
+  position: relative
   visibility: hidden
   margin-left: 3em
   flex: 0.6
+
+.dark-mode-toggle-button
+  position: absolute
+  top: 10px
+  right: 10px
+  background: white !important
 </style>
