@@ -12,6 +12,7 @@ $deezerIconUrl: url('@/assets/icons/deezer.png')
 $youtubeMusicIconUrl: url('@/assets/icons/youtubemusic.png')
 $discogsIconUrl: url('@/assets/icons/discogs.png')
 $geniusIconUrl: url('@/assets/icons/genius.png')
+$musixmatchIconUrl: url('@/assets/icons/musixmatch.png')
 $musicbrainzIconUrl: url('@/assets/icons/musicbrainz.png')
 
 .ui.label
@@ -47,6 +48,9 @@ $musicbrainzIconUrl: url('@/assets/icons/musicbrainz.png')
       &.genius
         &:before
           filter: none
+      &.musixmatch
+        &:before
+          filter: none
       &.musicbrainz
         &:before
           filter: none
@@ -57,6 +61,7 @@ i.icon
   &.youtubemusic,
   &.discogs,
   &.genius,
+  &.musixmatch,
   &.musicbrainz
     width: 20px
     height: 20px
@@ -93,6 +98,12 @@ i.icon.discogs
 i.icon.genius
   &:before
     background: $geniusIconUrl !important
+    background-size: 100% !important
+    filter: grayscale(1)
+
+i.icon.musixmatch
+  &:before
+    background: $musixmatchIconUrl !important
     background-size: 100% !important
     filter: grayscale(1)
 

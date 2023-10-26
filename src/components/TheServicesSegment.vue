@@ -99,6 +99,10 @@ export default {
           name: 'Genius'
         },
         {
+          code: 'musixmatch',
+          name: 'MusixMatch'
+        },
+        {
           code: 'musicbrainz',
           name: 'MusicBrainz'
         }
