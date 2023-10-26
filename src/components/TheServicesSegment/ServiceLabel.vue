@@ -56,6 +56,7 @@ export default {
 <style lang="sass" scoped>
 .service-label
   background: white !important
+  cursor: pointer
   &:not(.transition)
     visibility: hidden
 </style>
