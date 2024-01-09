@@ -12,7 +12,7 @@ export default {
   data () {
     return {
       copyrightText:
-        'Copyright (c) 2020-2023 Aleksey Shpakovsky'
+        'Copyright (c) 2020-2024 Aleksey Shpakovsky'
     }
   }
 }
