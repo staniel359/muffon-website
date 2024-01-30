@@ -96,7 +96,10 @@ export default {
     handleSuccess (
       response
     ) {
-      this.releases = response.data
+      this.releases =
+        response.data.filter(
+          this.isPublishedRelease
+        )
 
       const files =
         this.releases[0].assets
@@ -105,6 +108,11 @@ export default {
         files.map(
           this.formatFileData
         )
+    },
+    isPublishedRelease (
+      release
+    ) {
+      return !release.prerelease
     },
     formatFileData (
       fileData
@@ -176,7 +184,7 @@ export default {
     retryGetLatestReleaseData () {
       setTimeout(
         this.getLatestReleaseData,
-        1000
+        2000
       )
     },
     isPrimaryFile (
