@@ -15,8 +15,15 @@
         class="top-image-container"
       >
         <img
+          v-show="!isDarkMode"
           class="ui image bordered"
-          :src="topImage"
+          :src="imageLight"
+        >
+
+        <img
+          v-show="isDarkMode"
+          class="ui image bordered"
+          :src="imageDark"
         >
 
         <button
@@ -53,10 +60,11 @@ export default {
     }
   },
   computed: {
-    topImage () {
-      return (
-        this.isDarkMode ? imageDark : imageLight
-      )
+    imageDark () {
+      return imageDark
+    },
+    imageLight () {
+      return imageLight
     },
     leftSectionTransitionOptions () {
       return {
