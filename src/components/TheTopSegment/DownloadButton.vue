@@ -104,8 +104,13 @@ export default {
       const files =
         this.releases[0].assets
 
+      const filesFiltered =
+        files.filter(
+          this.isMatchedFile
+        )
+
       this.files =
-        files.map(
+        filesFiltered.map(
           this.formatFileData
         )
     },
@@ -191,6 +196,13 @@ export default {
       fileData
     ) {
       return !!fileData.isPrimary
+    },
+    isMatchedFile (
+      fileData
+    ) {
+      return !fileData.name.match(
+        /.(yml|blockmap)$/
+      )
     }
   }
 }
