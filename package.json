@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^1.6.8",
     "fomantic-ui": "^2.9.3",
+    "jquery": "^3.7.1",
     "vue": "^3.4.21",
     "vue-i18n": "^9.10.2"
   },
