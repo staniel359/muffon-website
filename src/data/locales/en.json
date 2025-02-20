@@ -1,7 +1,7 @@
 {
   "title": "A brand new music experience",
   "download": "Download for {systemName}",
-  "fileSize": "({size} Mb)",
+  "fileSize": "({size} MB)",
   "notSupported": "Sorry, muffon is not supported by your system.",
   "services": "All services in one place",
   "downloadNow": "Download now",
