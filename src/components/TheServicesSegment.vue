@@ -67,10 +67,6 @@ export default {
           name: 'Bandcamp'
         },
         {
-          code: 'deezer',
-          name: 'Deezer'
-        },
-        {
           code: 'soundcloud',
           name: 'SoundCloud'
         }

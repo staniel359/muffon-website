@@ -8,7 +8,6 @@ $colorYouTube: #FF0000
 $colorDiscord: #5865F2
 
 $yandexMusicIconUrl: url('@/assets/icons/yandexmusic.png')
-$deezerIconUrl: url('@/assets/icons/deezer.png')
 $youtubeMusicIconUrl: url('@/assets/icons/youtubemusic.png')
 $discogsIconUrl: url('@/assets/icons/discogs.png')
 $geniusIconUrl: url('@/assets/icons/genius.png')
@@ -29,9 +28,6 @@ $musicbrainzIconUrl: url('@/assets/icons/musicbrainz.png')
           filter: none
       &.bandcamp
         color: $colorBandcamp !important
-      &.deezer
-        &:before
-          filter: none
       &.soundcloud
         color: $colorSoundCloud !important
       &.spotify
@@ -57,7 +53,6 @@ $musicbrainzIconUrl: url('@/assets/icons/musicbrainz.png')
 
 i.icon
   &.yandexmusic,
-  &.deezer,
   &.youtubemusic,
   &.discogs,
   &.genius,
@@ -74,12 +69,6 @@ i.icon
 i.icon.yandexmusic
   &:before
     background: $yandexMusicIconUrl !important
-    background-size: 100% !important
-    filter: grayscale(1)
-
-i.icon.deezer
-  &:before
-    background: $deezerIconUrl !important
     background-size: 100% !important
     filter: grayscale(1)
 
