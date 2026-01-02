@@ -16,14 +16,6 @@
 
       <div class="ui massive labels">
         <ServiceLabel
-          v-for="serviceData in videoServices"
-          :key="serviceData.code"
-          :service-data="serviceData"
-        />
-      </div>
-
-      <div class="ui massive labels">
-        <ServiceLabel
           v-for="serviceData in otherServices"
           :key="serviceData.code"
           :service-data="serviceData"
@@ -47,45 +39,35 @@ export default {
     return {
       streamingServices: [
         {
-          code: 'vk',
-          name: 'VK'
+          code: 'bandcamp',
+          name: 'Bandcamp'
         },
         {
           code: 'odnoklassniki',
           name: 'Odnoklassniki'
         },
         {
-          code: 'yandexmusic',
-          name: 'Yandex Music'
+          code: 'soundcloud',
+          name: 'SoundCloud'
         },
         {
           code: 'spotify',
           name: 'Spotify'
         },
         {
-          code: 'bandcamp',
-          name: 'Bandcamp'
+          code: 'vk',
+          name: 'VK'
         },
         {
-          code: 'soundcloud',
-          name: 'SoundCloud'
-        }
-      ],
-      videoServices: [
+          code: 'yandexmusic',
+          name: 'Yandex Music'
+        },
         {
           code: 'youtubemusic',
           name: 'YouTube Music'
-        },
-        {
-          code: 'youtube',
-          name: 'YouTube'
         }
       ],
       otherServices: [
-        {
-          code: 'lastfm',
-          name: 'Last.FM'
-        },
         {
           code: 'discogs',
           name: 'Discogs'
@@ -95,12 +77,20 @@ export default {
           name: 'Genius'
         },
         {
-          code: 'musixmatch',
-          name: 'MusixMatch'
+          code: 'lastfm',
+          name: 'Last.FM'
         },
         {
           code: 'musicbrainz',
           name: 'MusicBrainz'
+        },
+        {
+          code: 'musixmatch',
+          name: 'MusixMatch'
+        },
+        {
+          code: 'youtube',
+          name: 'YouTube'
         }
       ]
     }
