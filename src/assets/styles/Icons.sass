@@ -1,0 +1,154 @@
+$amazonMusicIconUrl: url('https://m.media-amazon.com/images/G/01/music/logo/1.0/smile_256x256.png')
+$audiusIconUrl: url('https://audius.co/favicons/favicon-32x32.png')
+$bandcampIconUrl: url('https://s4.bcbits.com/img/favicon/favicon-32x32.png')
+$deezerIconUrl: url('https://cdn-files.dzcdn.net/cache/images/common/favicon/favicon-32x32.ed120c279a693bed3a44.png')
+$discogsIconUrl: url('https://st.discogs.com/fb5fa4963e35b16891aced33c92856a9fcedf8b2/images/favicon-32x32.png')
+$geniusIconUrl: url('https://assets.genius.com/images/apple-touch-icon.png')
+$lastfmIconUrl: url('https://www.last.fm/static/images/favicon.702b239b6194.ico')
+$musicbrainzIconUrl: url('https://musicbrainz.org/static/images/favicons/favicon-32x32.png')
+$musixmatchIconUrl: url('https://s.mxmcdn.net/site/images/favicon-32.png')
+$odnoklassnikiIconUrl: url('https://ok.ru/favicon.ico')
+$soundCloudIconUrl: url('https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14bdb.ico')
+$spotifyIconUrl: url('https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png')
+$vkIconUrl: url('https://vk.ru/images/icons/favicons/fav_logo.ico')
+$yandexMusicIconUrl: url('https://music.yandex.ru/favicon-48x48.png')
+$youtubeIconUrl: url('https://www.youtube.com/s/desktop/e358493a/img/favicon_32x32.png')
+$youtubeMusicIconUrl: url('https://music.youtube.com/img/favicon_32.png')
+
+$discordIconUrl: url('https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb42d4e27bb8393_847541504914fd33810e70a0ea73177e.ico')
+
+.ui.label
+  &:hover
+    .icon
+      &.amazonmusic,
+      &.audius,
+      &.bandcamp,
+      &.deezer,
+      &.discogs,
+      &.genius,
+      &.lastfm,
+      &.musicbrainz,
+      &.musixmatch,
+      &.odnoklassniki,
+      &.soundcloud,
+      &.spotify,
+      &.vk,
+      &.yandexmusic,
+      &.youtube,
+      &.youtubemusic,
+      &.discord
+        &:before
+          filter: none
+
+i.icon
+  &.amazonmusic,
+  &.audius,
+  &.bandcamp,
+  &.deezer,
+  &.discogs,
+  &.genius,
+  &.lastfm,
+  &.musicbrainz,
+  &.musixmatch,
+  &.odnoklassniki,
+  &.soundcloud,
+  &.spotify,
+  &.vk,
+  &.yandexmusic,
+  &.youtube,
+  &.youtubemusic,
+  &.discord
+    width: 24px
+    height: 24px
+    &:before
+      content: ""
+      display: block
+      width: 24px
+      height: 24px
+      filter: grayscale(1)
+
+  &.amazonmusic
+    &:before
+      background: $amazonMusicIconUrl !important
+      background-size: 100% !important
+
+  &.audius
+    &:before
+      background: $audiusIconUrl !important
+      background-size: 100% !important
+
+  &.bandcamp
+    &:before
+      background: $bandcampIconUrl !important
+      background-size: 100% !important
+
+  &.deezer
+    &:before
+      background: $deezerIconUrl !important
+      background-size: 100% !important
+
+  &.discogs
+    &:before
+      background: $discogsIconUrl !important
+      background-size: 100% !important
+
+  &.genius
+    &:before
+      background: $geniusIconUrl !important
+      background-size: 100% !important
+
+  &.lastfm
+    &:before
+      background: $lastfmIconUrl !important
+      background-size: 100% !important
+
+  &.musicbrainz
+    &:before
+      background: $musicbrainzIconUrl !important
+      background-size: 100% !important
+
+  &.musixmatch
+    &:before
+      background: $musixmatchIconUrl !important
+      background-size: 100% !important
+
+  &.odnoklassniki
+    &:before
+      background: $odnoklassnikiIconUrl !important
+      background-size: 100% !important
+
+  &.soundcloud
+    &:before
+      background: $soundCloudIconUrl !important
+      background-size: 100% !important
+
+  &.spotify
+    &:before
+      background: $spotifyIconUrl !important
+      background-size: 100% !important
+
+  &.vk
+    &:before
+      background: $vkIconUrl !important
+      background-size: 100% !important
+
+  &.yandexmusic
+    &:before
+      background: $yandexMusicIconUrl !important
+      background-size: 100% !important
+
+  &.youtube
+    &:before
+      background: $youtubeIconUrl !important
+      background-size: 100% !important
+
+  &.youtubemusic
+    &:before
+      background: $youtubeMusicIconUrl !important
+      background-size: 100% !important
+
+  &.discord
+    &:before
+      background: $discordIconUrl !important
+      background-size: 100% !important
+      filter: none

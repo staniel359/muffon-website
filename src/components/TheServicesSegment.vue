@@ -39,12 +39,24 @@ export default {
     return {
       streamingServices: [
         {
+          code: 'amazonmusic',
+          name: 'Amazon Music'
+        },
+        {
+          code: 'audius',
+          name: 'Audius'
+        },
+        {
           code: 'bandcamp',
           name: 'Bandcamp'
         },
         {
+          code: 'deezer',
+          name: 'Deezer'
+        },
+        {
           code: 'odnoklassniki',
-          name: 'Odnoklassniki'
+          name: 'OK.ru'
         },
         {
           code: 'soundcloud',
@@ -69,28 +81,28 @@ export default {
       ],
       otherServices: [
         {
-          code: 'discogs',
-          name: 'Discogs'
+          code: 'youtube',
+          name: 'YouTube'
         },
         {
           code: 'genius',
           name: 'Genius'
         },
         {
-          code: 'lastfm',
-          name: 'Last.FM'
-        },
-        {
-          code: 'musicbrainz',
-          name: 'MusicBrainz'
-        },
-        {
           code: 'musixmatch',
           name: 'MusixMatch'
         },
         {
-          code: 'youtube',
-          name: 'YouTube'
+          code: 'lastfm',
+          name: 'Last.FM'
+        },
+        {
+          code: 'discogs',
+          name: 'Discogs'
+        },
+        {
+          code: 'musicbrainz',
+          name: 'MusicBrainz'
         }
       ]
     }
